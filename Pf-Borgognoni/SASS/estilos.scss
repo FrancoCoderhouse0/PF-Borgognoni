@@ -1,0 +1,374 @@
+/*mixin*/
+@mixin Titulo{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    text-shadow: 0px 20px 7px black ;
+}
+
+/*variables*/
+$colores: (
+    "negro" : black,
+    "blanco": white,
+    );
+/*Home*/
+
+body{
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-decoration: none;
+    background-image: url(/img/background-2068215_1280.jpg);
+    background-size: cover;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(78, 40, 40);
+    height: 80px;
+    width: 100%;
+    text-decoration: none;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+nav a:hover{
+    color: map-get($colores , "blanco" );
+}
+li a.active, li a:hover{
+    background: #3a3a3a;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+.call{
+    color: map-get($colores , "blanco" );
+    width: 40%;
+    float: left;
+    border: 3px solid #f5e1ce;
+    padding: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 35px;
+    background-color: rgba(110, 62, 62, 0.411);
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 30%;
+}
+
+h1{
+    color: map-get($colores , "blanco" );
+    margin-bottom: 19px;
+    text-align: center;
+}
+
+
+footer{
+    text-align: center;
+    font-size: 15px;
+    background-color: rgb(78, 40, 40);
+    width: 100%;
+    margin-top: auto;
+
+}
+footer p{
+    margin-bottom: 0;
+}
+footer i{
+    font-size: 20px;
+    color: map-get($colores , "negro" );
+    letter-spacing: 0px;
+}
+
+.slide img{
+    height: 70vh;
+}
+
+.sec1{
+    text-align: center;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sec2{
+    text-align: center;
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #000000;
+}
+
+/*Servicios*/
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1100px;
+	margin: auto;
+    z-index: 1;
+}
+.title-cards{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+    color: map-get($colores , "blanco" );
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	background:#fff;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: 210px;
+}
+.card .contenido-card{
+	padding: 15px;
+	text-align: center;
+}
+.card .contenido-card h3{
+	margin-bottom: 15px;
+	color: #000000;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color: #000000;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+/*Productos*/
+.titulo{
+    color: map-get($colores , "blanco" );
+}
+.subtitulo{
+    color: rgb(185, 99, 99);
+}
+
+.card-text{
+    color: #000000;
+}
+.col{
+    background-color: rgb(78, 40, 40);
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+}
+.container-productos{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*Barra de busqueda*/
+.buscar {
+    position: relative;
+    padding: 5px;
+}
+
+.buscar input {
+    width: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #222;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.btn {
+    width: 55px;
+    height: 55px;
+    line-height: 45px;
+    top: 0;
+    right: 50px;
+    position: relative;
+    background: rgb(124, 64, 64);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.buscar:hover input {
+    width: 240px;
+}
+.buscador:hover i {
+    transform: rotate(-360deg);
+}
+
+/*Contacto*/
+
+.buscar input:focus {
+    width: 240px;
+}
+
+
+/*Ubicanos*/
+.mapa{
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+/*Registrarse*/
+
+.form-register {
+    width: 400px;
+    background: rgba(87, 49, 49, 0.842);
+    padding: 30px;
+    margin: auto;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    width: 100%;
+    background: rgb(48, 47, 47);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #fdfdfd;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-register a {
+    color: white;
+    text-decoration: none;
+}
+
+.form-register a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.form-register .botons {
+    width: 100%;
+    background: #000000;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 1280px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: rgb(34, 17, 17);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: rgb(22, 22, 22);
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
